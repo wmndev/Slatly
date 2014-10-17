@@ -17,6 +17,10 @@
 <!-- Custom styles for this template -->
 <link href="resources/template/css/navbar-fixed-top.css"
 	rel="stylesheet">
+<link href="resources/template/css/addon/font-awwsome-4_2_0.css"
+	rel="stylesheet">		
+<link href="resources/template/css/addon/social-buttons-3.css"
+	rel="stylesheet">
 
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -62,14 +66,14 @@
 	</div>
 
 	<div class="container">
-	<div class="row">
-		<div class="text-center">
-			<h1>Join the world's largest professional network.</h1>		
+		<div class="row">
+			<div class="text-center">
+				<h1>Join the world's largest professional network.</h1>
+			</div>
+
 		</div>
-	
-	</div>
-	
-	
+
+
 		<div class="row">
 			<div class="col-lg-6 ">
 				<!-- Main component for a primary marketing message or call to action -->
@@ -89,27 +93,28 @@
 			</div>
 
 			<div class="col-lg-5 col-lg-push-1">
-			
-				<div >
-				<h3>Start Now - It's Free.</h3>
-				<h4>Registration takes less than 2 minutes.</h4>
-				
-				
+
+				<div>
+					<h3>Start Now - It's Free.</h3>
+					<h4>Registration takes less than 2 minutes.</h4>
+
+
 				</div>
-			
+
 				<form role="form">
 					<div class="form-group">
-						<input
-							type="email" class="form-control" placeholder="Email"  id="exampleInputEmail1" />
+						<input type="email" class="form-control" placeholder="Email"
+							id="exampleInputEmail1" />
 					</div>
 					<div class="form-group">
-						<label></label>
-						<input
-							type="password" placeholder="Password" class="form-control" id="exampleInputPassword1" />
+						<label></label> <input type="password" placeholder="Password"
+							class="form-control" id="exampleInputPassword1" />
 					</div>
 
 					<button type="submit" class="btn btn-primary">Sign Up</button>
 				</form>
+				<hr>
+				<button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Connect with Facebook</button>
 			</div>
 
 		</div>
