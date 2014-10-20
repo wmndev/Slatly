@@ -9,7 +9,7 @@
 <meta name="author" content="">
 <!--  <link rel="icon" href="../../favicon.ico"> -->
 
-<title>Fixed Top Navbar Example for Bootstrap</title>
+<title>Slatly</title>
 
 <!-- Bootstrap core CSS -->
 <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -50,10 +50,10 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<form class="navbar-form navbar-left" role="search">
+						<form class="navbar-form navbar-left" role="login" action="j_spring_security_check" method="post">
 							<div class="form-group">
-								<input type="email" class="form-control" placeholder="Email">
-								<input type="password" class="form-control"
+								<input type="email" class="form-control" placeholder="Email" id="j_username" name="j_username">
+								<input type="password" class="form-control" id="j_password" name="j_password" 
 									placeholder="Password">
 							</div>
 							<button type="submit" class="btn btn-primary">Sign In</button>
@@ -74,8 +74,8 @@
 		</div>
 
 
-		<div class="row">
-			<div class="col-lg-6 ">
+		<div class="row" style="margin-top: 50px;">
+			<div class="col-md-6 ">
 				<!-- Main component for a primary marketing message or call to action -->
 				<div class="jumbotron">
 					<h1>Navbar example</h1>
@@ -92,7 +92,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-5 col-lg-push-1">
+			<div class="col-md-5 col-md-push-1">
 
 				<div>
 					<h3>Start Now - It's Free.</h3>
@@ -101,17 +101,17 @@
 
 				</div>
 
-				<form role="form">
+				<form role="form" action="sign_up_user" method="post">
 					<div class="form-group">
-						<input type="email" class="form-control" placeholder="Email"
+						<input name="email" type="email" class="form-control" placeholder="Email"
 							id="exampleInputEmail1" />
 					</div>
 					<div class="form-group">
-						<label></label> <input type="password" placeholder="Password"
+						<label></label> <input name="password" type="password" placeholder="Password"
 							class="form-control" id="exampleInputPassword1" />
 					</div>
 
-					<button type="submit" class="btn btn-primary">Sign Up</button>
+					<button type="submit" class="btn btn-primary">Join!</button>
 				</form>
 				<hr>
 				<button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Connect with Facebook</button>

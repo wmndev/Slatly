@@ -2,7 +2,7 @@ package com.slatly.arch.platform.db.model.user;
 
 import java.io.Serializable;
 
-public class UserSecurity implements Serializable {
+public class Security implements Serializable {
 
 	private static final long serialVersionUID = 8608379064539236577L;
 	
@@ -13,7 +13,9 @@ public class UserSecurity implements Serializable {
 	private boolean status;
 	
 	
-	public UserSecurity(String email, String password){
+	public Security(){}
+	
+	public Security(String email, String password){
 		this.email = email;
 		this.password = password;
 		status = true;

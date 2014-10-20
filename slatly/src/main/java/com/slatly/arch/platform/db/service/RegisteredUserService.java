@@ -7,5 +7,6 @@ public interface RegisteredUserService {
 	public void saveRegisteredUser(RegisteredUser user);
 	
 	public RegisteredUser getRegisteredUserByEmail(String email);
-
+	
+	public RegisteredUser createRegisteredUserObject(String email, String password);
 }
