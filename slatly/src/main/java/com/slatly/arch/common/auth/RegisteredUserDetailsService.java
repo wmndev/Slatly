@@ -16,16 +16,19 @@ import org.springframework.transaction.annotation.Transactional;
 import com.slatly.arch.platform.db.model.user.RegisteredUser;
 import com.slatly.arch.platform.db.service.RegisteredUserService;
 
+
 @Transactional(readOnly = true)
 public class RegisteredUserDetailsService implements UserDetailsService {
 
 	@Autowired
 	private RegisteredUserService registeredUserService;
 	
+	
 	@Override
 	public UserDetails loadUserByUsername(String email)
 			throws UsernameNotFoundException {
 		RegisteredUser rUser = registeredUserService.getRegisteredUserByEmail(email);
+		
 		
 		UserDetails user = new User(
 			     rUser.getSecurity().getEmail(), 
