@@ -2,10 +2,13 @@ package com.slatly.arch.platform.db.model.user;
 
 import java.io.Serializable;
 
+import org.springframework.data.mongodb.core.index.Indexed;
+
 public class Security implements Serializable {
 
 	private static final long serialVersionUID = 8608379064539236577L;
 	
+	@Indexed
 	private String email;
 	
 	private String password;

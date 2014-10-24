@@ -31,6 +31,12 @@ body{
 <!-- Bootstrap core CSS -->
 <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+
+
+	<script type="text/javascript" src="resources/js/jquery.min.js"></script>
+	<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
+	
+		
 <!-- Custom styles for this template -->
 <link href="resources/template/css/navbar-fixed-top.css"
 	rel="stylesheet">
@@ -38,10 +44,13 @@ body{
 	rel="stylesheet">		
 <link href="resources/template/css/addon/social-buttons-3.css"
 	rel="stylesheet">
+<link href="http://bootswatch.com/flatly/bootstrap.css" type="text/css">	
 
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-<script src="resources/bootstrap/js/ie-emulation-modes-warning.js"></script>
+<!-- <script src="resources/bootstrap/js/ie-emulation-modes-warning.js"></script> -->
+
+
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -52,42 +61,89 @@ body{
 
 <body>
 
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+			</div>
 
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th"></span>
+							<span class="caret"></span>
+					</a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="#">Profile</a></li>
+							<li><a href="#">Settings</a></li>
+							<li><a href="#">Help</a></li>
+							<li class="divider"></li>
+							<li><a href="j_spring_security_logout">Log Out</a></li>
+						</ul></li>
+				</ul>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</div>
 <div class="container">
             
     <div class="row">
         <div class="col-xs-6 col-md-3">
             
-            <div class="panel status panel-danger">
+            <div class="panel status panel-default">
                 <div class="panel-heading">
-                    <h1 class="panel-title text-center">25</h1>
+                    <h1 class="panel-title text-center"><a href="#">25</a></h1>
                 </div>
-                <div class="panel-body text-center">                        
-                    <strong>Late</strong>
+                <div class="panel-body ">                        
+                    <span>Location</span>
+                    <div class="pull-right">
+                    	<ul class="list-inline">
+                    		<li><a href="#"><span class="glyphicon glyphicon-user"></span> 2</a></li>
+                    		<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+                    	</ul>
+                    </div>
                 </div>
             </div>
 
         </div>          
         <div class="col-xs-6 col-md-3">
           
-            <div class="panel status panel-warning">
+            <div class="panel status panel-default">
                 <div class="panel-heading">
-                    <h1 class="panel-title text-center">17</h1>
+                    <h1 class="panel-title text-center"><a href="#">17</a></h1>
                 </div>
-                <div class="panel-body text-center">                        
-                    <strong>Today</strong>
+                <div class="panel-body ">                        
+                    <span>Mood</span>
+                    <div class="pull-right">
+                    	<ul class="list-inline">
+                    		<li><a href="#"><span class="glyphicon glyphicon-user"></span> 1</a></li>
+                    		<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+                    	</ul>
+                    </div>
                 </div>
+           
             </div>
 
         </div>
         <div class="col-xs-6 col-md-3">
            
-            <div class="panel status panel-success">
+            <div class="panel status panel-default">
                 <div class="panel-heading">
-                    <h1 class="panel-title text-center">2</h1>
+                    <h1 class="panel-title text-center"><a href="#">2</a></h1>
                 </div>
-                <div class="panel-body text-center">                        
-                    <strong>Tomorrow</strong>
+                <div class="panel-body ">                        
+                    <span>Interests</span>
+                    <div class="pull-right">
+                    	<ul class="list-inline">
+                    		<li><a href="#"><span class="glyphicon glyphicon-user"></span> 7</a></li>
+                    		<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+                    	</ul>
+                    </div>
                 </div>
             </div>
 
@@ -95,12 +151,18 @@ body{
         </div>
         <div class="col-xs-6 col-md-3">
           
-            <div class="panel status panel-info">
+            <div class="panel status panel-default">
                 <div class="panel-heading">
-                    <h1 class="panel-title text-center">18</h1>
+                    <h1 class="panel-title text-center"><a href="#">18</a></h1>
                 </div>
-                <div class="panel-body text-center">                        
-                    <strong>Never Die</strong>
+                <div class="panel-body ">                        
+                    <span>Free Style</span>
+                    <div class="pull-right">
+                    	<ul class="list-inline">
+                    		<li><a href="#"><span class="glyphicon glyphicon-user"></span> 12</a></li>
+                    		<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+                    	</ul>
+                    </div>
                 </div>
             </div>
 
@@ -112,11 +174,11 @@ body{
 
 <hr>
 
-<div class="container well"> 
+<!-- <div class="container well"> 
     <strong>Theme <small>(<a href="http://bootswatch.com/" target="_new">bootswatch.com</a>)</small></strong>
     <select class="form-control"></select>
-</div>
+</div> -->
 
-<link src="http://bootswatch.com/flatly/bootstrap.css" type="text/css">
+
 
 </body></html>

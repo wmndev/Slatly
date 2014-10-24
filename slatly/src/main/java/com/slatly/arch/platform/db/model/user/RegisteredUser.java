@@ -1,7 +1,9 @@
 package com.slatly.arch.platform.db.model.user;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.TypeAlias;
@@ -20,11 +22,13 @@ public class RegisteredUser implements Serializable {
 	
 	private Security security;
 	
+	private List<UserMessage> messages;
+	
 	public RegisteredUser(String email, String password){
 		this.id = System.currentTimeMillis();
 		this.setSecurity(new Security(email, password));
 		this.setCreatedDate(new Date(System.currentTimeMillis()));
-		
+		this.messages = new ArrayList<>(); 		
 	}
 	
 	public RegisteredUser(){}
@@ -48,12 +52,13 @@ public class RegisteredUser implements Serializable {
 	public void setSecurity(Security security) {
 		this.security = security;
 	}
-	
-	
-	
-	
-	
-	
-	
+
+	public List<UserMessage> getMessages() {
+		return messages;
+	}
+
+	public void setMessages(List<UserMessage> messages) {
+		this.messages = messages;
+	}
 
 }

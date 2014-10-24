@@ -16,39 +16,43 @@ import org.springframework.transaction.annotation.Transactional;
 import com.slatly.arch.platform.db.model.user.RegisteredUser;
 import com.slatly.arch.platform.db.service.RegisteredUserService;
 
-
 @Transactional(readOnly = true)
 public class RegisteredUserDetailsService implements UserDetailsService {
 
 	@Autowired
 	private RegisteredUserService registeredUserService;
-	
-	
+
 	@Override
 	public UserDetails loadUserByUsername(String email)
 			throws UsernameNotFoundException {
-		RegisteredUser rUser = registeredUserService.getRegisteredUserByEmail(email);
-		
-		
-		UserDetails user = new User(
-			     rUser.getSecurity().getEmail(), 
-			     rUser.getSecurity().getPassword(),
-			     true,
-			     true,
-			     true,
-			     true,
-			     getAuthorities(1) );
-		
+		RegisteredUser rUser = registeredUserService
+				.getRegisteredUserByEmail(email);
+
+		UserDetails user = null;
+		if (rUser != null) {
+			user = new User(rUser.getSecurity().getEmail(), rUser.getSecurity()
+					.getPassword(), true, true, true, true, getAuthorities(1));
+		}else{
+			user = new User("XX_not_auth", "XX_not_auth_pwd2", false, false, false, false, getAuthorities(-1));
+		}
 		return user;
 	}
-	
+
 	@SuppressWarnings("deprecation")
 	public Collection<GrantedAuthority> getAuthorities(Integer access) {
 		List<GrantedAuthority> authList = new ArrayList<>();
-		if (access == 1){
-			authList.add(new GrantedAuthorityImpl("ROLE_USER"));
-		}
 		
+		switch(access){
+		case 1:
+			authList.add(new GrantedAuthorityImpl("ROLE_USER"));
+			break;
+		case 2:
+			authList.add(new GrantedAuthorityImpl("ROLE_ADMIN"));
+			break;
+		default:
+			authList.add(new GrantedAuthorityImpl("ROLE_NOT_AUTH"));
+			
+		}
 		return authList;
 	}
 

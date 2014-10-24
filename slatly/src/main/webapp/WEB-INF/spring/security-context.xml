@@ -8,20 +8,20 @@
    http://www.springframework.org/schema/security/spring-security-3.2.xsd">
   
  <!-- This is where we configure Spring-Security  -->
- <security:http auto-config="true" use-expressions="true" access-denied-page="/denied" >
+ <security:http auto-config="true" use-expressions="true" access-denied-page="/try_login" >
   
   <security:intercept-url pattern="/home" access="permitAll"/>
   <security:intercept-url pattern="/console" access="hasRole('ROLE_USER')"/>
    
   <security:form-login
     login-page="/home"
-    authentication-failure-url="/home?error=true"
+    authentication-failure-url="/try_login"
     default-target-url="/console"/>
     
   <security:logout
     invalidate-session="true"
     logout-success-url="/home"
-    logout-url="/logout"/>
+    />
   
  </security:http>
   
