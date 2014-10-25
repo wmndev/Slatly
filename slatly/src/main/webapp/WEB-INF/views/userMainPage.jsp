@@ -2,19 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <style type="text/css">
+@import
+	url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900|Oswald)
+	;
 
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900|Oswald);
-body{
-    padding: 50px 0;
+body {
+	padding: 50px 0;
 }
+
 .status {
-    font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Source Sans Pro', sans-serif;
 }
+
 .status .panel-title {
-    font-family: 'Oswald', sans-serif;
-    font-size: 72px;
-    font-weight: bold;
-    color: #fff;
+	font-family: 'Oswald', sans-serif;
+	font-size: 72px;
+	font-weight: bold;
+	color: #fff;
 }
 </style>
 
@@ -33,18 +37,22 @@ body{
 
 
 
-	<script type="text/javascript" src="resources/js/jquery.min.js"></script>
-	<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
-	
-		
+<script type="text/javascript" src="resources/js/jquery.min.js"></script>
+<script type="text/javascript"
+	src="resources/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+	src="resources/template/js/userConsole.js"></script>
+
+
 <!-- Custom styles for this template -->
 <link href="resources/template/css/navbar-fixed-top.css"
 	rel="stylesheet">
 <link href="resources/template/css/addon/font-awwsome-4_2_0.css"
-	rel="stylesheet">		
+	rel="stylesheet">
 <link href="resources/template/css/addon/social-buttons-3.css"
 	rel="stylesheet">
-<link href="http://bootswatch.com/flatly/bootstrap.css" type="text/css">	
+<link href="resources/template/css/userConsole.css" rel="stylesheet">
+<link href="http://bootswatch.com/flatly/bootstrap.css" type="text/css">
 
 <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -75,9 +83,9 @@ body{
 
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-th"></span>
-							<span class="caret"></span>
-					</a>
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown"><span class="glyphicon glyphicon-th"></span>
+							<span class="caret"></span> </a>
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="#">Profile</a></li>
 							<li><a href="#">Settings</a></li>
@@ -90,95 +98,135 @@ body{
 			<!--/.nav-collapse -->
 		</div>
 	</div>
-<div class="container">
-            
-    <div class="row">
-        <div class="col-xs-6 col-md-3">
-            
-            <div class="panel status panel-default">
-                <div class="panel-heading">
-                    <h1 class="panel-title text-center"><a href="#">25</a></h1>
-                </div>
-                <div class="panel-body ">                        
-                    <span>Location</span>
-                    <div class="pull-right">
-                    	<ul class="list-inline">
-                    		<li><a href="#"><span class="glyphicon glyphicon-user"></span> 2</a></li>
-                    		<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
-                    	</ul>
-                    </div>
-                </div>
-            </div>
+	<div class="container">
 
-        </div>          
-        <div class="col-xs-6 col-md-3">
-          
-            <div class="panel status panel-default">
-                <div class="panel-heading">
-                    <h1 class="panel-title text-center"><a href="#">17</a></h1>
-                </div>
-                <div class="panel-body ">                        
-                    <span>Mood</span>
-                    <div class="pull-right">
-                    	<ul class="list-inline">
-                    		<li><a href="#"><span class="glyphicon glyphicon-user"></span> 1</a></li>
-                    		<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
-                    	</ul>
-                    </div>
-                </div>
-           
-            </div>
+		<div class="row">
+			<div class="col-xs-6 col-md-3">
 
-        </div>
-        <div class="col-xs-6 col-md-3">
-           
-            <div class="panel status panel-default">
-                <div class="panel-heading">
-                    <h1 class="panel-title text-center"><a href="#">2</a></h1>
-                </div>
-                <div class="panel-body ">                        
-                    <span>Interests</span>
-                    <div class="pull-right">
-                    	<ul class="list-inline">
-                    		<li><a href="#"><span class="glyphicon glyphicon-user"></span> 7</a></li>
-                    		<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
-                    	</ul>
-                    </div>
-                </div>
-            </div>
+				<div class="panel status panel-default">
+					<div class="panel-heading">
+						<h1 class="panel-title text-center">
+							<a href="#">25</a>
+						</h1>
+					</div>
+					<div class="panel-body ">
+						<span>Location</span>
+						<div class="pull-right">
+							<ul class="list-inline">
+								<li><a href="#"><span class="glyphicon glyphicon-user"></span>
+										2</a></li>
 
-         
-        </div>
-        <div class="col-xs-6 col-md-3">
-          
-            <div class="panel status panel-default">
-                <div class="panel-heading">
-                    <h1 class="panel-title text-center"><a href="#">18</a></h1>
-                </div>
-                <div class="panel-body ">                        
-                    <span>Free Style</span>
-                    <div class="pull-right">
-                    	<ul class="list-inline">
-                    		<li><a href="#"><span class="glyphicon glyphicon-user"></span> 12</a></li>
-                    		<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
-                    	</ul>
-                    </div>
-                </div>
-            </div>
+								<li><a href="#" data-placement="bottom"
+									data-toggle="popover" data-title="Open your mind" data-container="body"
+									type="button" data-html="true"> <span
+										class="glyphicon glyphicon-plus"></span></a></li>
+							</ul>
+							<div id="popover-content" class="hide popover-max-with">
+								<div class="pop-internal-content">
+									<form class="form-horizontal" role="form">
+										<div class="form-group">
+											<!-- <label></label> -->
+											<textarea class="form-control" rows="8"
+												placeholder="Share somthing..."></textarea>
+										</div>
 
-         
-        </div>
-    </div>
+										<div class="form-group">
+											<ul class="list-inline">
+												<li><a><span class="glyphicon glyphicon-picture"></span>  Photo</a></li>
+												<li><a><span
+														class="glyphicon glyphicon-facetime-video"></span>  Video</a></li>
+												<li><a><span class="glyphicon glyphicon-list-alt"></span>  Article</a></li>
+	
+											</ul>
+										</div>
+										<div class="form-group">
+										<ul id="popover-form-buttons" class="list-inline" style="width:100%;">
+											<li><button class="form-control btn btn-primary" type="submit" >Share</button><li>
+											<li><button class="form-control btn btn-default">Cancel</button></li>
+										</ul>
+										</div>
+										
+										
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-</div>
+			</div>
+			<div class="col-xs-6 col-md-3">
 
-<hr>
+				<div class="panel status panel-default">
+					<div class="panel-heading">
+						<h1 class="panel-title text-center">
+							<a href="#">17</a>
+						</h1>
+					</div>
+					<div class="panel-body ">
+						<span>Mood</span>
+						<div class="pull-right">
+							<ul class="list-inline">
+								<li><a href="#"><span class="glyphicon glyphicon-user"></span>
+										1</a></li>
+								<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+							</ul>
+						</div>
+					</div>
 
-<!-- <div class="container well"> 
-    <strong>Theme <small>(<a href="http://bootswatch.com/" target="_new">bootswatch.com</a>)</small></strong>
-    <select class="form-control"></select>
-</div> -->
+				</div>
+
+			</div>
+			<div class="col-xs-6 col-md-3">
+
+				<div class="panel status panel-default">
+					<div class="panel-heading">
+						<h1 class="panel-title text-center">
+							<a href="#">2</a>
+						</h1>
+					</div>
+					<div class="panel-body ">
+						<span>Interests</span>
+						<div class="pull-right">
+							<ul class="list-inline">
+								<li><a href="#"><span class="glyphicon glyphicon-user"></span>
+										7</a></li>
+								<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
 
 
+			</div>
+			<div class="col-xs-6 col-md-3">
 
-</body></html>
+				<div class="panel status panel-default">
+					<div class="panel-heading">
+						<h1 class="panel-title text-center">
+							<a href="#">18</a>
+						</h1>
+					</div>
+					<div class="panel-body ">
+						<span>Free Style</span>
+						<div class="pull-right">
+							<ul class="list-inline">
+								<li><a href="#"><span class="glyphicon glyphicon-user"></span>
+										12</a></li>
+								<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+
+	</div>
+
+	<hr>
+
+
+</body>
+</html>

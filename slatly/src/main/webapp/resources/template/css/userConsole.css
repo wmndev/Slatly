@@ -1,0 +1,17 @@
+/* POPOVER */
+
+.pop-internal-content{
+	margin: 10px;
+}
+
+.popover{
+    width:300px;
+    height:400px;
+}
+
+textarea { resize:none;}
+
+#popover-form-buttons button{
+	width:110px;
+	
+}
