@@ -4,39 +4,42 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="messages")
+@Document(collection = "messages")
 public class Message {
-	
+
 	@Id
 	private long id;
-	
+
+	private String content;
+
 	private List<Attachment> attachments;
-	
+
+	@Indexed
 	private long createdByUser;
-	
+
+	@Indexed
 	private Date createdDate;
-	
+
 	private Statistics statistics;
-	
+
 	private Distribution distribution;
-	
-	public Message(){}
-	
-	public Message(long createdByUser){
+
+	public Message(long id, long createdByUser) {
+		this.id = id;
 		this.createdByUser = createdByUser;
 		this.createdDate = new Date(System.currentTimeMillis());
 		this.statistics = new Statistics();
 		this.distribution = new Distribution();
 	}
+	
+	public Message() {
+	}
 
 	public long getId() {
 		return id;
-	}
-
-	public void setId(long id) {
-		this.id = id;
 	}
 
 	public List<Attachment> getAttachments() {
@@ -77,6 +80,14 @@ public class Message {
 
 	public void setDistribution(Distribution distribution) {
 		this.distribution = distribution;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 }

@@ -9,4 +9,6 @@ public interface RegisteredUserService {
 	public RegisteredUser getRegisteredUserByEmail(String email);
 	
 	public RegisteredUser createRegisteredUserObject(String email, String password);
+	
+	public RegisteredUser getRegisteredUserById(long id);
 }

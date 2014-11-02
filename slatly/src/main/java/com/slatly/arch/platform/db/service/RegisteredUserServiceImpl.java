@@ -1,16 +1,20 @@
 package com.slatly.arch.platform.db.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
+import com.slatly.arch.platform.db.codes.SequenceTypes;
 import com.slatly.arch.platform.db.model.user.RegisteredUser;
 import com.slatly.arch.platform.db.repository.RegisteredUserRepository;
 
-@Component
+@Service
 public class RegisteredUserServiceImpl implements RegisteredUserService {
 
 	@Autowired
 	private RegisteredUserRepository repository;
+	
+	@Autowired
+	private SequenceService sequenceService;
 	
 	@Override
 	public void saveRegisteredUser(RegisteredUser user) {
@@ -25,7 +29,13 @@ public class RegisteredUserServiceImpl implements RegisteredUserService {
 	@Override
 	public RegisteredUser createRegisteredUserObject(String email,
 			String password) {
-		return new RegisteredUser(email, password);
+		long nextId = sequenceService.getNextSequenceId(SequenceTypes.USERS.getId());
+		return new RegisteredUser(nextId, email, password);
+	}
+
+	@Override
+	public RegisteredUser getRegisteredUserById(long id) {
+		return repository.findOne(id);
 	}
 
 }

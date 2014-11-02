@@ -1,12 +1,12 @@
 package com.slatly.arch.platform.db.model.user;
 
-public class UserMessage {
+public class InboxMessage {
 	
 	private long messageId;
 	
 	private boolean isRead;
 	
-	public UserMessage(){}
+	public InboxMessage(){}
 	
 	public long getMessageId() {
 		return messageId;

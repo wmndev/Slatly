@@ -22,13 +22,13 @@ public class RegisteredUser implements Serializable {
 	
 	private Security security;
 	
-	private List<UserMessage> messages;
+	private Messages messages; 
 	
-	public RegisteredUser(String email, String password){
-		this.id = System.currentTimeMillis();
+	public RegisteredUser(long id, String email, String password){
+		this.id = id;
 		this.setSecurity(new Security(email, password));
 		this.setCreatedDate(new Date(System.currentTimeMillis()));
-		this.messages = new ArrayList<>(); 		
+		this.messages = new Messages(); 		
 	}
 	
 	public RegisteredUser(){}
@@ -53,11 +53,11 @@ public class RegisteredUser implements Serializable {
 		this.security = security;
 	}
 
-	public List<UserMessage> getMessages() {
+	public Messages getMessages() {
 		return messages;
 	}
 
-	public void setMessages(List<UserMessage> messages) {
+	public void setMessages(Messages messages) {
 		this.messages = messages;
 	}
 

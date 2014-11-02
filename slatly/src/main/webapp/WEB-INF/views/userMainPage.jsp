@@ -101,6 +101,9 @@ body {
 	<div class="container">
 
 		<div class="row">
+		
+
+		
 			<div class="col-xs-6 col-md-3">
 
 				<div class="panel status panel-default">
@@ -109,7 +112,7 @@ body {
 							<a href="#">25</a>
 						</h1>
 					</div>
-					<div class="panel-body ">
+					<div class="panel-body">
 						<span>Location</span>
 						<div class="pull-right">
 							<ul class="list-inline">
@@ -117,39 +120,10 @@ body {
 										2</a></li>
 
 								<li><a href="#" data-placement="bottom"
-									data-toggle="popover" data-title="Open your mind" data-container="body"
-									type="button" data-html="true"> <span
+									data-toggle="popover" data-title="Open your mind"
+									data-container="body" type="button" data-html="true"> <span
 										class="glyphicon glyphicon-plus"></span></a></li>
 							</ul>
-							<div id="popover-content" class="hide popover-max-with">
-								<div class="pop-internal-content">
-									<form class="form-horizontal" role="form">
-										<div class="form-group">
-											<!-- <label></label> -->
-											<textarea class="form-control" rows="8"
-												placeholder="Share somthing..."></textarea>
-										</div>
-
-										<div class="form-group">
-											<ul class="list-inline">
-												<li><a><span class="glyphicon glyphicon-picture"></span>  Photo</a></li>
-												<li><a><span
-														class="glyphicon glyphicon-facetime-video"></span>  Video</a></li>
-												<li><a><span class="glyphicon glyphicon-list-alt"></span>  Article</a></li>
-	
-											</ul>
-										</div>
-										<div class="form-group">
-										<ul id="popover-form-buttons" class="list-inline" style="width:100%;">
-											<li><button class="form-control btn btn-primary" type="submit" >Share</button><li>
-											<li><button class="form-control btn btn-default">Cancel</button></li>
-										</ul>
-										</div>
-										
-										
-									</form>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -169,7 +143,10 @@ body {
 							<ul class="list-inline">
 								<li><a href="#"><span class="glyphicon glyphicon-user"></span>
 										1</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+								<li><a href="#" data-placement="bottom"
+									data-toggle="popover" data-title="Open your mind"
+									data-container="body" type="button" data-html="true"> <span
+										class="glyphicon glyphicon-plus"></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -191,7 +168,10 @@ body {
 							<ul class="list-inline">
 								<li><a href="#"><span class="glyphicon glyphicon-user"></span>
 										7</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+								<li><a href="#" data-placement="bottom"
+									data-toggle="popover" data-title="Open your mind"
+									data-container="body" type="button" data-html="true"> <span
+										class="glyphicon glyphicon-plus"></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -213,7 +193,10 @@ body {
 							<ul class="list-inline">
 								<li><a href="#"><span class="glyphicon glyphicon-user"></span>
 										12</a></li>
-								<li><a href="#"><span class="glyphicon glyphicon-plus"></span></a></li>
+								<li><a href="#" data-placement="bottom"
+									data-toggle="popover" data-title="Open your mind"
+									data-container="body" type="button" data-html="true"> <span
+										class="glyphicon glyphicon-plus"></span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -221,12 +204,54 @@ body {
 
 
 			</div>
+
+			<div id="popover-content" class="hide popover-max-with">
+				<div class="pop-internal-content">
+					<form id="formMsg" method="post" class="form-horizontal" role="form">
+						<div class="form-group">
+							<label></label> 
+							<textarea class="form-control" name="msgContent" rows="8"
+								placeholder="Share somthing..."></textarea>
+						</div>
+
+						<div class="form-group">
+							<ul class="list-inline">
+								<li><a><span class="glyphicon glyphicon-picture"></span>
+										Photo</a></li>
+								<li><a><span class="glyphicon glyphicon-facetime-video"></span>
+										Video</a></li>
+								<li><a><span class="glyphicon glyphicon-list-alt"></span>
+										Article</a></li>
+
+							</ul>
+						</div>
+						<div class="form-group">
+							<ul id="popover-form-buttons" class="list-inline"
+								style="width: 100%;">
+								<li><input id="postMsg"
+										class="form-control btn btn-primary" type="submit"/>
+								<li>
+								<li><button id="hidePopOver"
+										class="form-control btn btn-default">Cancel</button>
+										</li>
+							</ul>
+						</div>
+
+
+					</form>
+
+
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+  </div>
+</div>
+
+				</div>
+			</div>
 		</div>
 
 	</div>
 
 	<hr>
-
-
 </body>
 </html>
