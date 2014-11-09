@@ -1,7 +1,11 @@
 package com.slatly.arch.platform.db.model.message;
 
-public class Statistics {
+import java.io.Serializable;
+
+public class Statistics implements Serializable {
 	
+	private static final long serialVersionUID = 6480605856180454669L;
+
 	private long totalViews;
 	
 	private int totalLikes;

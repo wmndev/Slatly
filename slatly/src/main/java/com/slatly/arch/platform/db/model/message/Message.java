@@ -1,14 +1,19 @@
 package com.slatly.arch.platform.db.model.message;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.TypeAlias;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "messages")
-public class Message {
+@TypeAlias("postMsg")
+public class Message implements Serializable {
+
+	private static final long serialVersionUID = 4930626942528082855L;
 
 	@Id
 	private long id;

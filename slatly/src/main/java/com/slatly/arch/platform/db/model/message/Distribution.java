@@ -1,10 +1,14 @@
 package com.slatly.arch.platform.db.model.message;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Distribution {
+public class Distribution implements Serializable {
 	
+
+	private static final long serialVersionUID = -1195920293513577386L;
+
 	private List<Criteria> criterias;
 	
 	private short maxUsersAllowed;
