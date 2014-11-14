@@ -47,3 +47,11 @@ body {
 .panel-hight {
 	height: 100px;
 }
+
+.post{
+	box-shadow: #3a8ff0 0px 0px 0px 2px inset;
+}
+
+#message-content{
+	padding: 2px;
+}

@@ -159,6 +159,17 @@
         	<artifactId>xbean-spring</artifactId>
         	<version>4.1</version>
         </dependency>
+        <dependency>
+        	<groupId>edu.stanford.nlp</groupId>
+        	<artifactId>stanford-corenlp</artifactId>
+        	<version>3.4.1</version>
+        </dependency>
+        <dependency>
+    <groupId>edu.stanford.nlp</groupId>
+    <artifactId>stanford-corenlp</artifactId>
+    <version>3.4.1</version>
+    <classifier>models</classifier>
+</dependency>
 	</dependencies>
     <build>
         <plugins>

@@ -55,7 +55,7 @@
 <body>
 
 	<!-- Fixed navbar -->
-	<div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+	<div class="navbar navbar-default navbar-fixed-top " role="navigation">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
@@ -89,7 +89,7 @@
 
 
 			<div id="left-content" class="col-xs-12 col-md-3">
-				<div class="panel status panel-primary">
+				<div class="panel status panel-default">
 					<div class="panel-heading panel-hight">
 						<h1 class="panel-title text-center">
 				
@@ -164,7 +164,7 @@
 				<!-- posts -->
 
 				<div id="posts">
-					<div id="individual-msg" class="panel panel-default soft-background" style="height: 70px;">
+					<div id="single-post" class="panel panel-default soft-background post" style="min-height: 150px;">
 						<div id=message-content></div>
 						<p>
 						<img style="float:left;margin:0 5px 0 0;" src="resources/images/avatars/avatar.jpeg" alt=""/>
